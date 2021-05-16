@@ -218,5 +218,5 @@ def download_img(user_link , img_number , user_name="" , user_pawword="" , path=
 
 
 
-download_img("page_link",(0,6),"user_name","user_password",path="path/to/folder")
+download_img(user_link="page_link",img_number=(0,6),user_name="user_name",user_pawword="user_password",path="path/to/folder")
 
