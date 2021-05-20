@@ -140,6 +140,7 @@ def download_img(user_link , img_number , user_name="" , user_pawword="" , path=
     if driver.current_url == "https://www.instagram.com/accounts/login/":
         driver = connedted_page(driver , user_name , user_pawword)
         driver.get(user_link)
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     print("I'm On the requested page")
     page = BeautifulSoup(driver.page_source , features="lxml")
     link = page.find_all("div",{"class":"Nnq7C weEfm"})
